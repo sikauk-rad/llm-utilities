@@ -1,11 +1,4 @@
-from collections.abc import Iterable, Set, Hashable, Mapping
-from os import getenv, environ, PathLike
-from pathlib import Path
-from typing import Literal, Any
-import uuid
-
-from beartype import beartype
-from msgspec import json
+from collections.abc import Iterable
 
 from .datatypes import AzureMessageCountType, AzureMessageType
 
@@ -28,7 +21,6 @@ def check_all_arguments_are_none_or_not(
     return not (any(all_none) and (not all(all_none)))
 
 
-@beartype
 def strip_token_count(
     message: AzureMessageCountType,
 ) -> AzureMessageType:
@@ -54,7 +46,7 @@ def strip_token_count(
         content = message['content'],
     )
 
-@beartype
+
 def strip_token_counts(
     messages: Iterable[AzureMessageCountType],
 ) -> list[AzureMessageType]:

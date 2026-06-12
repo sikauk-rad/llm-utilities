@@ -4,14 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "llm_utilities"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   {name = "Milan Kundra", email = "kundra.milan@uk.sika.com"},
 ]
-dependencies = [
-  "msgspec",
-  "beartype>=0.17.0",
-]
+dependencies = []
 description = "Package containing utility functions for GPT apps."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,6 +18,5 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-# [project.urls]
-# Homepage = "https://github.com/SikaSIS/hybrid-rag"
-# Issues = "https://github.com/SikaSIS/hybrid-rag/issues"
+[project.urls]
+Homepage = "https://github.com/sikauk-rad/llm-utilities"
